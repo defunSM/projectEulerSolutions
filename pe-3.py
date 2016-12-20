@@ -3,14 +3,13 @@ import sys, os
 import optparse
 
 def prime(n):
-    counter = 1
-    array = []
-    while counter < n + 1:
+    counter = n - 1
+    while counter > 1:
         if n % counter == 0:
-            array.append(counter)
-        counter+=1
+            return counter
+        counter-=1
 
-    return array
+    return counter
 
 
 def main():
